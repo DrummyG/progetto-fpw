@@ -18,6 +18,7 @@ import Header from './components/Header.vue'
 </template>
 
 <style>
-  main{
-  }
+body{
+  background-color: var(--color-secondary-light);
+}
 </style>

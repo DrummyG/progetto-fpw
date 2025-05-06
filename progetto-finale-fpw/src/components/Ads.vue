@@ -3,3 +3,7 @@
         <p>qua ci metteremo le ads</p>
     </div>
 </template>
+
+<style>
+
+</style>
