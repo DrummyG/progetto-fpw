@@ -4,4 +4,4 @@ mancanti:
 -footer
 -css responsive
 -developer page
--routing delle pagine //possiamo anche rimandarlo
+-routing delle pagine
