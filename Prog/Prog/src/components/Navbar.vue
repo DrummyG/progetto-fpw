@@ -11,7 +11,9 @@
           
           <li><RouterLink to="/who">Chi siamo</RouterLink></li>   
           
-          <li v-show="checkUser()"><RouterLink to="/insert">Aggiungi Prodotto</RouterLink></li> 
+          <li v-show="checkUser()"><RouterLink to="/insert">Aggiungi Prodotto</RouterLink></li>
+          <li v-show="checkUser()"><RouterLink to="/profile">Profilo</RouterLink></li> 
+          
           <li v-show="!checkUser()"><RouterLink to="/login">Login</RouterLink></li> 
       </ul>     
   </nav>
