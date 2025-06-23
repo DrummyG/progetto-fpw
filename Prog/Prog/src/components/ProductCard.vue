@@ -78,13 +78,12 @@ export default {
   width: calc(33.33% - 20px);
   border-radius: 20px;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  min-height: 350px;
-  max-height: 550px;
+  
 }
 
 #proprietario-id {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   color: var(--tertiary);
 }
 
@@ -99,6 +98,7 @@ img {
     display: block;
     text-align: center;
     overflow: hidden;
+    font-size: 25px;
 }
 
 .tendenza{
@@ -140,20 +140,22 @@ img {
   border-radius: 6px; /* angoli arrotondati */
 }
 
-
+@media (min-width: 769px) and (max-width: 1250px) {
+    [class*="col-4"] {
+      width: 41.66%;
+    }
+}
 
 /*Mobile*/
 @media only screen and (max-width: 768px) {
     [class*="col-4"] {
       width: 100%;
-      min-height: 800px;
     }
 }
 /*Mini*/
 @media only screen and (max-width: 500px) {
     [class*="col-4"] {
       width: 100%;
-      min-height: 600px;
     }
 }
 </style>
