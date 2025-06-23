@@ -3,12 +3,12 @@
 const getProdotti = `
   SELECT prodotti.*, utenti.username
   FROM prodotti
-  JOIN utenti ON prodotti.id_proprietario = utenti.id
+  JOIN utenti ON prodotti.id_proprietario = utenti.username
   ORDER BY prodotti.id ASC `;
 const getProdottoById = `
   SELECT prodotti.*, utenti.username
   FROM prodotti
-  JOIN utenti ON prodotti.id_proprietario = utenti.id
+  JOIN utenti ON prodotti.id_proprietario = utenti.username
   WHERE prodotti.id = $1 `;
 //post
 const addProdotto = "INSERT INTO prodotti (id, nome, prezzo, img, trend, descrizione, id_proprietario) VALUES ($1, $2, $3, $4, $5, $6, $7)";
