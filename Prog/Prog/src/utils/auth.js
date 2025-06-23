@@ -9,6 +9,17 @@ const login = async (username, password) => {
     return await response.json()
 }
 
+const logout = async() => {
+    const response = await fetch('api/sessions/logout', {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+    })
+    return await response.json();
+}
+
 export {
-    login
+    login,
+    logout
 }

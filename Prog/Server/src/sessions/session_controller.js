@@ -22,6 +22,25 @@ const login = (req, res) => {
     })
 }
 
+const logout = (req, res) => {
+    if(req.session.userId){
+        req.session.destroy()
+        res.status(200).json({message: 'logout effettuato'})
+    }else{
+        res.status(401).json({message:'non sei loggato'})
+    }
+}
+
+const isLogged = (req, res) => {
+    if(req.session.userId){
+        res.status(200).json(req.session)
+    }else{
+        res.status(401).json({message: 'non sei loggato'})
+    }
+}
+
 module.exports = {
-    login
+    login,
+    logout,
+    isLogged
 }

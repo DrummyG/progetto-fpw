@@ -1,18 +1,18 @@
-<script>
+<script setup>
    import { RouterLink} from 'vue-router' 
 </script>
+
 <template>
     <nav class="navbar">
       <ul>
           <li><RouterLink to="/">Home</RouterLink></li>
           
           <li><RouterLink to="/products">Prodotti</RouterLink></li>
-        
-          <li><RouterLink to="/insert">Aggiungi Prodotto</RouterLink></li> 
-          <li><RouterLink to="/login">Login</RouterLink></li>   
+          
           <li><RouterLink to="/who">Chi siamo</RouterLink></li>   
           
-   
+          <li v-show="checkUser()"><RouterLink to="/insert">Aggiungi Prodotto</RouterLink></li> 
+          <li v-show="!checkUser()"><RouterLink to="/login">Login</RouterLink></li> 
       </ul>     
   </nav>
 </template>
@@ -75,3 +75,27 @@ a:hover {
    
 }
 </style>
+
+<script>
+
+import { useSessionStore } from '@/stores/session'
+export default {
+  components: {
+    RouterLink
+  },
+  data(){
+    return{
+      sessionStore: useSessionStore()
+    }
+  },
+  methods: {
+    checkUser(){
+      if(this.sessionStore.getUser() == null){
+        return false
+      }else{
+        return true
+      }
+    }
+  }
+}
+</script>
