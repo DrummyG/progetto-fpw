@@ -42,5 +42,5 @@ const isLogged = (req, res) => {
 module.exports = {
     login,
     logout,
-    isLogged
+    isLogged,
 }
