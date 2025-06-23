@@ -1,7 +1,7 @@
 const express = require('express');
 const prodottiRoutes = require('./src/prodotti/prodotti_routes');
 const userRoutes = require('./src/utenti/utenti_routes');
-const userRoutes = require('./src/sessions/session_routes');
+const sessionRoutes = require('./src/sessions/session_routes');
 const path = require('path');
 
 const app = express();
