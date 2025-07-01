@@ -1,0 +1,141 @@
+@import './base.css';
+
+body {
+    background: radial-gradient( var(--color-tertiary-light) 40%, var(--tertiary) 100%);
+}
+
+
+nav {
+    background: var(--quinary);
+   
+    text-align: center;
+    /*position: sticky;*/
+    top: 0;
+}
+hr {
+    height: 2px;
+    background-color: var(--tertiary);
+    border: none;
+}
+h1,h2,h3 {
+    color: var(--tertiary);
+}
+
+header {
+    background: radial-gradient(circle, var(--color-secondary-light) 35%, var(--color-tertiary-light));
+    text-align: center;
+}   
+
+#intro {
+    text-align: center;
+    font-weight: bold;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+/* classe che circonda il form */
+.formContent{
+    height: calc(80vh - 50px);
+    position: relative;
+}
+
+/* Classe del form USARE SOLO QUESTA NON RIPETERE CODICE NELLE PAGINE SINGOLE*/
+.form{
+    text-align: center;
+    background: var(--primary);
+    color: var(--tertiary);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    padding: 20px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.form input[type="submit"]:Hover {
+    background: var(--tertiary);
+    color: var(--white);
+}
+.form label{
+    font-weight:bold;
+}
+    
+.form input{
+    display: block;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.form input[type="submit"]{
+    background: var(--white);
+    color: var(--primary);
+    font-weight: bold;
+    cursor: pointer;
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+
+}
+/*CSS per informazioni di sinistra*/
+#titoloindice {
+  background: var(--primary);
+  font-weight: bold;
+  color: (--white);
+  font-size: 20px;
+  text-align: center;
+
+  padding: 15px 0px 15px 0px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0px;
+}
+
+#indice {
+  list-style: none;
+  background: var(--secondary);
+
+  margin: 0px;
+  padding: 0px 0px 20px 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#indice li {
+  background: var(--white);
+
+  margin-right: 30px;
+  padding-top: 10px;
+}
+
+#indice li>a {
+  color: var(--tertiary);
+}
+
+#indice li:last-child {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#aboutTitle {
+  text-align: center;
+}
+
+
+
